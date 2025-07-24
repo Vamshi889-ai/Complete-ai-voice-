@@ -1,0 +1,8 @@
+// AI Voice (once every 2 sec)
+if (e.x === player.x && e.y > 300 && e.y < 400 && Date.now() - lastVoiceTime > voiceCooldown) {
+    if (player.x === 50) speak("Car ahead, take right and reduce speed to 40");
+    else if (player.x === 200) speak("Car ahead, take left and reduce speed to 40");
+    else speak("Car ahead, choose safe side and slow down");
+
+    lastVoiceTime = Date.now();
+}
